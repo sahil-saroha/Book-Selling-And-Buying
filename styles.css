@@ -1,0 +1,96 @@
+/* ========== Theme ==========
+   Author: You
+   Stack: Bootstrap 5 + Custom CSS */
+:root {
+  --bb-primary: #6c5ce7;
+  --bb-accent: #00d2d3;
+  --bb-dark: #0f1117;
+  --bb-muted: #adb5bd;
+}
+
+html, body { height: 100%; }
+body {
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial;
+  background: radial-gradient(900px 600px at 10% -10%, rgba(108,92,231,.08), transparent 60%),
+              radial-gradient(900px 600px at 110% 0%, rgba(0,210,211,.08), transparent 55%),
+              var(--bb-dark);
+  color: #e9ecef;
+}
+
+/* Navbar */
+.navbar {
+  backdrop-filter: saturate(180%) blur(8px);
+  background: rgba(15,17,23,.6) !important;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.navbar .nav-link { opacity: .9; }
+.navbar .nav-link:hover { opacity: 1; }
+
+/* Hero */
+.hero {
+  position: relative;
+  padding: 7rem 0 4rem;
+  background: radial-gradient(70% 70% at 0% 0%, rgba(108,92,231,.25), transparent 60%),
+              radial-gradient(65% 70% at 100% 0%, rgba(0,210,211,.18), transparent 50%);
+  overflow: hidden;
+}
+.hero .glow {
+  position: absolute; inset: -20% -20% auto auto; width: 40vmax; height: 40vmax;
+  background: radial-gradient(closest-side, rgba(108,92,231,.24), rgba(108,92,231,0));
+  filter: blur(30px); pointer-events: none; opacity: .6;
+}
+.tag {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12);
+  color: #dfe6e9; font-size: .85rem;
+  padding: .35rem .7rem; border-radius: 999px;
+}
+.gradient-text {
+  background: linear-gradient(90deg, #ffffff, var(--bb-accent));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
+/* Cards */
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,.35); }
+.book-cover {
+  aspect-ratio: 3/4; object-fit: cover; border-radius: .75rem; width: 100%;
+}
+.badge-rating {
+  background: rgba(255,255,255,.08);
+}
+
+/* Filters */
+.filter-chip {
+  border: 1px solid rgba(255,255,255,.16);
+  color: #dfe6e9; background: rgba(255,255,255,.06);
+}
+.filter-chip.active, .filter-chip:hover {
+  border-color: var(--bb-accent);
+}
+
+/* CTA */
+.cta-box {
+  border: 1px solid rgba(255,255,255,.1);
+  background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+}
+
+/* Footer */
+footer { color: #dfe6e9; }
+footer a { color: #dfe6e9; opacity: .9; }
+footer a:hover { opacity: 1; }
+
+/* Utilities */
+.section-title { letter-spacing: .5px; font-weight: 700; color: #ffffff; }
+.shadow-soft { box-shadow: 0 10px 25px rgba(0,0,0,.25); }
+.text-muted { color: var(--bb-muted) !important; }
+
+/* Responsive tweaks */
+@media (max-width: 575.98px) {
+  .hero { padding: 6rem 0 3rem; }
+}
